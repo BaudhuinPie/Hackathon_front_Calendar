@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import MovieForm from './components/MovieForm';
+import BackOffice from './components/backoffice/BackOffice';
 //import MoviesList from './components/MoviesList';
 
 // répuc les datas
@@ -14,9 +15,7 @@ class App extends React.Component {
     return (
      <div>
         <header className="App-header">
-          <MovieForm/>
-          <p></p>
-          {/* <MoviesList/> */}
+          <BackOffice />
         </header>
       </div>
     );
