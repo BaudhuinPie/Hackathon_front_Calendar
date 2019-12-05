@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import MovieForm from './components/MovieForm';
 //import MoviesList from './components/MoviesList';
+import InputGETserver from './components/InputGETserver';
 
 // répuc les datas
 // envoyer les datas au serveur via request  http  de type POST
@@ -17,6 +18,7 @@ class App extends React.Component {
           <MovieForm/>
           <p></p>
           {/* <MoviesList/> */}
+          <InputGETserver/>
         </header>
       </div>
     );
