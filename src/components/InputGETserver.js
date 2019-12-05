@@ -26,7 +26,7 @@ import { getDefaultWatermarks } from 'istanbul-lib-report';
             axios // j'appelle axios addon télérachargé localement
                 .get(`http://localhost:5555/akacalendar/${pointer}`)
                 .then(data => {
-                    console.log(" App get Response  fafter Listing ? " );
+                    console.log("Response to GET request :" );
                     //let val = JSON.parse(res.data)
 
                     this.setState({
@@ -46,7 +46,7 @@ import { getDefaultWatermarks } from 'istanbul-lib-report';
     cleanState = () => {
         if(this.state.freshDATA) {
             let calendata = this.state;
-            console.log( "VERYYYf:",this.state.toClean )
+            console.log( "to CLEAN:",this.state.toClean )
 
             switch(this.state.toClean) {
                 case 'mycalendar':
@@ -79,7 +79,7 @@ import { getDefaultWatermarks } from 'istanbul-lib-report';
                 default:
                         this.setState({ freshDATA: false })
             }
-            console.log("shall get this afater cleaning:", calendata.mycalendar.data[0]);
+            console.log("state data is being cleaned (hover update)");
         }
     }
 
