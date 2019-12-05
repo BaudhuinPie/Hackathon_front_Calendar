@@ -1,0 +1,62 @@
+.headerHomePage{
+    width: 100vw;
+    height: 100vh;
+
+    background-image: linear-gradient( rgba(163, 146, 71, 0.1), rgba(163, 146, 71, 0.1)), url('https://cdn.pixabay.com/photo/2017/10/25/17/26/hands-2888625_960_720.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.daysCalendar{
+    border: 2px solid black;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.daysCalendarLink{
+    border: 2px solid black;
+    width: 150px;
+    height: 150px;
+
+    text-align: center;
+    vertical-align:middle;
+    display: table-cell;
+    
+    margin: auto;
+    position: relative;
+}
+
+.dayCalendarLink {
+    text-decoration: none;
+    color: black;
+}
+
+.buttonLike{
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 115px;
+    bottom: 115px;
+    
+}
+
+.buttonLike button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+
+    background-color: rgb(63, 53, 53);
+}
+
+.buttonLike :hover{
+    background-color: darkred;
+    width: 55px;
+    height: 55px;
+}

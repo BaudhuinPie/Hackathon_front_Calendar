@@ -1,28 +1,65 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import MovieForm from './components/MovieForm';
-//import MoviesList from './components/MoviesList';
+import React, { Component } from 'react';
+import                           './App.css';
+import { Switch, Route }    from 'react-router-dom';
+import Bulle                from './components/Bulle/Bulle';
+import HomePage             from './components/HomePage/HomePage'
 
-// répuc les datas
-// envoyer les datas au serveur via request  http  de type POST
+class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state =  {
+            days: [{
+                key: 1,
+                likes: 124,
+                customisationPersonnelle : 'Ceci est ma customisation',
+                prixAssociation : 5,
+                asblInfo : 'Ceci est une présentation de l\'asbl',
+                clicked: false 
+            },{
+                key: 2,
+                likes: 124,
+                customisationPersonnelle : 'Ceci est ma customisation',
+                prixAssociation : 5,
+                asblInfo : 'Ceci est une présentation de l\'asbl',
+                clicked: false 
+            },{
+                key: 3,
+                likes: 124,
+                customisationPersonnelle : 'Ceci est ma customisation',
+                prixAssociation : 5,
+                asblInfo : 'Ceci est une présentation de l\'asbl',
+                clicked: false 
+            }]
+        }
+    }
 
-class App extends React.Component {
+    handleClickToLike = () => {
+        this.setState({clicked : true});
+    }
 
-  render() {
-      // onSubmit = syntax de React.
-    return (
-     <div>
-        <header className="App-header">
-          <MovieForm/>
-          <p></p>
-          {/* <MoviesList/> */}
-        </header>
-      </div>
+
+    render() { 
+    return ( 
+        <div>
+            <Switch>
+                <Route
+                    exact 
+                    path='/'
+                    render={(props) => < HomePage
+                    days={this.state.days}
+                    selectLike={() => this.handleClickToLike()}
+                    component={HomePage} />}
+                />
+                <Route 
+                    path='/Bulle'
+                
+                    render={(props) => < Bulle  days={this.state.days}/>
+                    }
+                />
+            </Switch>
+        </div>
     );
-
   }
-  
 }
-
+ 
 export default App;

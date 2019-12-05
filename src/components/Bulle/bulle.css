@@ -1,0 +1,36 @@
+.headerBulle{ 
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: linear-gradient( rgba(163, 146, 71, 0.1), rgba(163, 146, 71, 0.1)), url('https://cdn.pixabay.com/photo/2017/10/25/17/26/hands-2888625_960_720.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.pageBulle{
+    width: 50vw;
+    height: 50vh;
+
+    position: relative;
+    
+    overflow: scroll;
+
+    
+}
+
+.likesBulle{
+    width:  50vw;
+
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.customBulle{border: 2px solid black;
+    height: 50vh;
+}
