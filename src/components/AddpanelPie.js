@@ -11,7 +11,7 @@ class AddpanelPie extends Component {
             remainDays: this.findNumberOfDays(),
         }
     }
-
+ //==================================== for INPUT ===============================================
     onChange = (event, index) => {
         // let value = event.target.value;
         // let updatedInputs = this.updateNumbersOfDays(this.state.inputs, position, value)
@@ -50,7 +50,7 @@ class AddpanelPie extends Component {
 
         for (let i=0 ; i < numbOfInputs ; i++) {
             let localname = `input_${i}`
-            listOfInputs.push(<Input  value ={this.state.localname}  onChange={this.onChange} description={localname} index = {i} key={i}/>); //list of inputs
+            listOfInputs.push(<><label>Day {i} </label><Input  value ={this.state.localname}  onChange={this.onChange} description={localname} index = {i} key={i}/> </>); //list of inputs
             // stateListInpName.push(localname);
             // stateListInpValue.push(this.state.localname);
         }
@@ -58,6 +58,14 @@ class AddpanelPie extends Component {
         return listOfInputs;
 
     }
+//=================================================================================
+
+    handleSubmission = (event) => {
+        event.preventDefault();
+        this.props.submission(this.state)
+        console.log("remontée du state")
+    }
+
 
     componentDidMount() {
         this.dipslayInputs();
@@ -72,14 +80,18 @@ class AddpanelPie extends Component {
                 <input type="date" />
                 <p>Numbers of days till Christmas: 19</p>
 
-                 {this.dipslayInputs()}
+                <form onSubmit={this.handleSubmission}>
 
-                 {/* {this.state.inputs.map((input, index) => (
-                     <>
-                    <Input onChange={this.onChange} position={index} description={input} itsValue={this.state.inputs[index].name} key={index} />
-                    </>
-                 ))} */}
-                 <button className="button-send-all">Send All videos</button>
+                    {this.dipslayInputs()}
+
+                    {/* {this.state.inputs.map((input, index) => (
+                        <>
+                        <Input onChange={this.onChange} position={index} description={input} itsValue={this.state.inputs[index].name} key={index} />
+                        </>
+                    ))} */}
+                    <button className="button-send-all">Send All videos</button>
+
+                 </form>
             </div>
             </>
         )

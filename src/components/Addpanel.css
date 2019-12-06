@@ -1,11 +1,11 @@
-.addpanel-zone {
+.addpanel-zone, form{
     display:flex;
     flex-direction:column;
     margin-top: 5px;
 }
 
 input[type="text"] {
-    margin-top: 5px
+    margin-bottom: 15px
 }
 
 .button-send-all { 
