@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios'; // ipmporter xios est nécessaire pour fetchinget receip...
-import Movie from './Movie';
 import { getDefaultWatermarks } from 'istanbul-lib-report';
 
  export default class InputGETserver extends React.Component {

@@ -1,11 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-//import MovieForm from './components/MovieForm';
-//import MoviesList from './components/MoviesList';
+import BackOffice from './components/backoffice/BackOffice';
 import InputGETserver from './components/InputGETserver';
 import InputPOSTserver from './components/InputPOSTserver';
-
 
 // répuc les datas
 // envoyer les datas au serveur via request  http  de type POST
@@ -17,11 +14,10 @@ class App extends React.Component {
     return (
      <div>
         <header className="App-header">
-          {/* <MovieForm/> */}
-          <InputPOSTserver/>
+          {/*<InputPOSTserver/>
           <p></p>
-          {/* <MoviesList/> */}
-          <InputGETserver/>
+          <InputGETserver/> */}
+          <BackOffice />
         </header>
       </div>
     );
