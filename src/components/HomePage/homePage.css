@@ -68,6 +68,34 @@
     justify-content: center;
 }
 
+.likes {
+    display: flex;
+    flex-direction : column;
+    justify-content: center;
+    position: absolute;
+    left: -15px;
+    bottom: -15px;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(133, 30, 30);
+    /* border : 2px solid green; */
+    box-shadow :  inset 2px -3px 3px rgb(199, 169, 0);
+    
+}
+.likes:hover {
+    width: 70px;
+    height: 70px;
+    box-shadow :  2px -3px 10px rgb(117, 110, 112);
+    font-weight: bold;
+}
+/* .like div {
+    display: table-cell;
+    vertical-align: middle;
+} */
+
 .dayCalendarLink {
     /* border: 2px solid black; */
     left: 0px;
@@ -76,7 +104,8 @@
     position: absolute;
 
     text-decoration: none;
-    color: black;
+    color: rgb(231, 218, 218);
+    text-shadow: 1px 1px 0 #969696, 1px -3px 5px #aba8a8;
 }
 
 .buttonLike{
@@ -86,6 +115,7 @@
     position: absolute;
     left: 115px;
     bottom: 115px;
+    color: rgb(211, 211, 11);
     
 }
 
@@ -94,12 +124,14 @@
     height: 50px;
     border-radius: 50%;
     border: none;
-
-    background-color: rgb(63, 53, 53);
+    color: rgb(175, 175, 19);
+    font-weight: bold;
+    font-size: 1em;
+    background-color: rgba(67, 78, 68, 0.904);
 }
 
 .buttonLike :hover{
-    background-color: darkred;
+    background-color: rgba(139, 0, 0, 0.822);
     width: 55px;
     height: 55px;
 }

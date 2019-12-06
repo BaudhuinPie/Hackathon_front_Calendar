@@ -6,8 +6,15 @@ class HomePage extends Component {
     constructor(props) {
         super(props);
         console.log("in bulles ?", props.days)
-        this.state = { };
-        // this.lastElementofURL = this.findLastElement(this.props.url);
+        this.state = {
+
+        }
+        
+    }
+    num = 0;
+
+    componentDidUpdate() {
+        console.log('you clied');
     }
 
     // findLastElement = (url) => {
@@ -23,34 +30,45 @@ class HomePage extends Component {
             <div className="headerHomePage">
                 <div className="daysCalendar">
                     {
-                    this.props.days.map((day, index) => 
+                    this.props.days.map((day, index) => { ///map
+                        console.log("ceci",day.passed);
+                    return(
                     <div className="daysCalendarLink">
-                        <NavLink  
-                            className="dayCalendarLink" 
-                            activeClassName="active" 
-                            to={`/Bulle/${index + 1}`}
-                        >
-                            <img className="imageDay" src={day.image} width="100%" height="100%" ></img>
-                            <p className="homePageP">Day {index+1}</p>
-                        </NavLink>
+                        {day.passed==true ? 
+                            <NavLink  
+                                className="dayCalendarLink" 
+                                activeClassName="active"
+                                
+                                to={  `/Bulle/${index + 1}`}  //lien
+                            >
+                                {/* <p onClick={()=> this.props.transIndex(index+1)} className="homePageP">Day {index+1}</p > */}
+                                <div className="likes">
+                                    <div>{day.likes}</div>
+                                </div>
+                                <img className="imageDay" onClick={()=> this.props.transIndex(index+1)} src={day.image} width="100%" height="100%" />
+                                <p className="homePageP">Day {index+1}</p>
+                            </NavLink> :
+                                <div className="dayCalendarLink">
+                                <img className="imageDay" src={day.image} width="100%" height="100%" />
+                                <p className="homePageP">Day {index+1}</p>
+                                </div>
+                                }
+                                   
+            
                         <div className="buttonLike">
-                            <button onClick={() => this.props.selectLike(index)} >Like</button>
+                            <button onClick={() => this.props.selectLike(index +1)} >Like</button>
+                            {/* <p className="homePageP">Day {index+1}</p > <div className="likes"> {day.likes}</div> */}
                         </div>
-                    </div>
-                    )
+                    </div>)
+                    })
                     }
                 </div>
-            </div>
+                </div>
         )
     }
 }
  
 export default HomePage;
 
-
-// handleClick = () => {
-//     this.setState({days : 1});
-//     // console.log(key);
-//    }
 
 
