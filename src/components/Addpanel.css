@@ -1,0 +1,13 @@
+.addpanel-zone {
+    display:flex;
+    flex-direction:column;
+    margin-top: 5px;
+}
+
+input[type="text"] {
+    margin-top: 5px
+}
+
+.button-send-all { 
+    margin-top: 10px;
+}
