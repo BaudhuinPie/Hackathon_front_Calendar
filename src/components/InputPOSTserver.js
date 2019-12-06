@@ -26,8 +26,9 @@ export default class InputPOSTserver extends React.Component {
         console.log ("qui était : ", this.state);
         let opCors = { methods: 'Post'}
 
-        fetch('http://localhost:5000/api/movies', { // On créée ici l'adresse URL puis on va ensuite aller paramétrer le serveur.
+        fetch('http://localhost:5555/api/akacalendar', { // On créée ici l'adresse URL puis on va ensuite aller paramétrer le serveur.
           method: 'POST' ,
+          mode : 'cors',
           body: JSON.stringify(this.state), // this.dataform,
           headers: {'Content-Type':'application/json' } //Précise le type de data envoyé vers le serveur.
           

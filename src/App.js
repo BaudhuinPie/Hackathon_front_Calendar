@@ -5,6 +5,8 @@ import './App.css';
 //import MoviesList from './components/MoviesList';
 import InputGETserver from './components/InputGETserver';
 import InputPOSTserver from './components/InputPOSTserver';
+import UpDatePOSTmycalendar from './components/UpDatePOSTmycalendar';
+
 
 
 // répuc les datas
@@ -19,7 +21,7 @@ class App extends React.Component {
         <header className="App-header">
           {/* <MovieForm/> */}
           <InputPOSTserver/>
-          <p></p>
+          <p><UpDatePOSTmycalendar/></p>
           {/* <MoviesList/> */}
           <InputGETserver/>
         </header>
