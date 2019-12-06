@@ -7,13 +7,19 @@ import Likes                    from './Likes';
 import bulle                    from './bulle.css'; 
 
 
-
 class Bulle extends Component {
     constructor(props) {
         super(props);
         console.log("in bulles ?", props.days)
-        this.state = {  }
+        this.state = {  };
+        this.lastElementofURL = this.findLastElement(this.props.url);
     }
+
+    findLastElement = (url) => {
+        const splitted = url.split('/');
+        let lastSegment = splitted.pop();
+    return lastSegment
+}
     
     render() { 
         return ( 
@@ -24,9 +30,20 @@ class Bulle extends Component {
                         to={'/'} >
                     Retour
                 </NavLink>
+                {/* <p className="dayPageP">Day {index+1}</p> */}
             
                 <div className="pageBulle">
-                    <div className="likesBulle">
+                    <div className="pageBulleLeft">
+                        <div class="embedresize">
+                            <div>
+                            <iframe allowfullscreen frameborder="0" src={this.props.days[this.lastElementofURL].customisationPersonnelle} allow='autoplay' width="300" height="350"></iframe>
+                            </div>
+                        </div>
+                    </div>     
+                    <div className="pageBulleRight">
+
+                    </div>
+                 {/*   <div className="likesBulle">
                         < Likes 
                             likes={this.props.likes}
                         />
@@ -45,7 +62,7 @@ class Bulle extends Component {
                         < AsblInfo 
                             asblInfo={this.props.asblInfo}
                         />
-                    </div>
+                    </div> */}
                 </div>
             </div>
          );

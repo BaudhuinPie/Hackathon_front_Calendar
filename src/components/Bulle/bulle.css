@@ -6,31 +6,90 @@
     justify-content: center;
     align-items: center;
 
-    background-image: linear-gradient( rgba(163, 146, 71, 0.1), rgba(163, 146, 71, 0.1)), url('https://cdn.pixabay.com/photo/2017/10/25/17/26/hands-2888625_960_720.jpg');
+    background-image: url(../../images/christmas-313364_1280.jpg);
     background-size: cover;
     background-position: center;
 }
 
-.pageBulle{
-    width: 50vw;
-    height: 50vh;
-
-    position: relative;
-    
-    overflow: scroll;
-
-    
-}
-
-.likesBulle{
-    width:  50vw;
+.retourBulleLink{
+    /* border: 2px solid black; */
+    width: 100px;
+    height: 50px;
 
     position: absolute;
+    left: 100px;
+    top: 80px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(109, 84, 84);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.753);
+    border-radius: 10px;
+}
+
+.retourBulleLink :hover{
+    border: 2px solid black;
+}
+
+.pageBulle{
+    /* border: 2px solid black; */
+    width: 35vw;
+    height: 80vh;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgba(153, 58, 58, 0.712);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.753);
+    border-radius: 10px;
+}
+
+.pageBulleLeft{
+    /* border: 1px solid black; */
 
 }
 
-.customBulle{border: 2px solid black;
-    height: 50vh;
+.pageBulleRight{
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 100%;
+    max-width: 560px;
+    margin: auto;
 }
+
+.embedresize {
+    width: 100%;
+    height: 100%;
+    max-width: 560px;
+    margin: auto;
+    }
+    
+    .embedresize div {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+    }
+    
+    .embedresize iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    }
+    
+    .intro #intro .embedresize iframe,
+    .exit .quizz .embedresize iframe,
+    .alreadyplayed #intro .embedresize iframe,
+    .identityset #intro .embedresize iframe,
+    #notabene .embedresize iframe,
+    #message_intro .embedresize iframe,
+    .fancybox_body .embedresize iframe,
+    #comments .embedresize iframe,
+    #description .embedresize iframe,
+    .alreadyplayed .embedresize iframe,
+    #adserver .embedresize iframe {
+    max-width: none !important;
+    }

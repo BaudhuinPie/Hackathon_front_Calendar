@@ -1,37 +1,59 @@
 .headerHomePage{
     width: 100vw;
     height: 100vh;
-
-    background-image: linear-gradient( rgba(163, 146, 71, 0.1), rgba(163, 146, 71, 0.1)), url('https://cdn.pixabay.com/photo/2017/10/25/17/26/hands-2888625_960_720.jpg');
+    
+    background-image: url(../../images/christmas-313364_1280.jpg);
     background-size: cover;
     background-position: center;
 }
 
 .daysCalendar{
-    border: 2px solid black;
+    
     width: 100vw;
     height: 100vh;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 
 }
 
 .daysCalendarLink{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     width: 150px;
     height: 150px;
 
     text-align: center;
-    vertical-align:middle;
-    display: table-cell;
     
-    margin: auto;
+    margin: 30px;
     position: relative;
+
+    background-color: rgba(153, 58, 58, 0.712);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.753);
+    border-radius: 10px;
+}
+
+.daysCalendarLink:hover{
+    background-color: rgba(153, 58, 58, 0.712); 
+    box-shadow: 0px 0px 10px rgba(148, 128, 128, 0.753);
+    border-radius: 10px;
+}
+
+.homePageP {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .dayCalendarLink {
+    /* border: 2px solid black; */
+    left: 0px;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+
     text-decoration: none;
     color: black;
 }
