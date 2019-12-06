@@ -1,7 +1,7 @@
 import React from 'react';
 const cors = require('cors');
 
-export default class UpDatePOSTserver extends React.Component {
+export default class UpDatePOSTmycalendar extends React.Component {
     constructor (props) {
         super(props);
         this.state = {
@@ -22,9 +22,9 @@ export default class UpDatePOSTserver extends React.Component {
         }
         console.log(JSON.stringify(mycalendar));
             console.log ("qui était : ", mycalendar);
-        fetch('http://localhost:5555/api/akacalendar/mycalendar', { // On créée ici l'adresse URL puis on va ensuite aller paramétrer le serveur.
+        fetch('http://localhost:5555/akacalendar/mycalendar', { // On créée ici l'adresse URL puis on va ensuite aller paramétrer le serveur.
           method: 'POST' ,
-          mode : 'cors',
+          //mode : 'cors',
           body: JSON.stringify(mycalendar), // this.dataform,
           headers: {'Content-Type':'application/json' } //Précise le type de data envoyé vers le serveur.
           
@@ -56,7 +56,7 @@ export default class UpDatePOSTserver extends React.Component {
                         value ={calend.mycalendar} onChange={this.handleInput}
                         />
                     <button>Enregistrer le calend</button>
-                    <p>^ formulaire ^</p>
+                    <p>^ input à dissequer ^</p>
                 </form>
             </div>
         )

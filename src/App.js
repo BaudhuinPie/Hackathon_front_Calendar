@@ -6,6 +6,7 @@ import './App.css';
 import InputGETserver from './components/InputGETserver';
 import InputPOSTserver from './components/InputPOSTserver';
 import UpDatePOSTmycalendar from './components/UpDatePOSTmycalendar';
+import UpDatePOSTmybubbles from './components/UpDatePOSTmybubbles';
 
 
 
@@ -19,6 +20,7 @@ class App extends React.Component {
     return (
      <div>
         <header className="App-header">
+          < UpDatePOSTmybubbles/>
           {/* <MovieForm/> */}
           <InputPOSTserver/>
           <p><UpDatePOSTmycalendar/></p>
