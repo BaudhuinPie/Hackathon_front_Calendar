@@ -39,6 +39,9 @@ export default class UpDatePOSTserver extends React.Component {
             //console.log(event.target.name, event.target.value);
     }
 
+    /** Au lieu de déclenccher la mémorisation sur event onClick; 
+     * on dépalce l'appel de fonction dans componentDidUpdate() */
+
     render() {
         let calend = this.state;
 
