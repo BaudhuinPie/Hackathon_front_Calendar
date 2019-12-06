@@ -7,6 +7,7 @@ import InputGETserver from './components/InputGETserver';
 import InputPOSTserver from './components/InputPOSTserver';
 import UpDatePOSTmycalendar from './components/UpDatePOSTmycalendar';
 import UpDatePOSTmybubbles from './components/UpDatePOSTmybubbles';
+import UpDatePOSTpitchname from './components/UpDatePOSTpitchname';
 
 
 
@@ -22,7 +23,8 @@ class App extends React.Component {
         <header className="App-header">
           < UpDatePOSTmybubbles/>
           {/* <MovieForm/> */}
-          <InputPOSTserver/>
+          <UpDatePOSTpitchname/>
+          {/* <InputPOSTserver/> */}
           <p><UpDatePOSTmycalendar/></p>
           {/* <MoviesList/> */}
           <InputGETserver/>
