@@ -46,17 +46,18 @@ componentDidUpdate() {
                             
                             </div>
                         </div>
-                        <p> Great Day ! They have got 2,40€</p>
+                        
+                        </div>
+
+                    </div>     
+                    <div className="pageBulleRight">
+                    <p> Great Day ! They have got 2,40€</p>
                         <h2>{this.props.days[this.props.url-1].asbl.name}</h2> <p>{this.props.days[this.props.url-1].asbl.description}</p>
                         <div class="embedresize">
                             <div>
                             <iframe allowfullscreen frameborder="0" src={this.props.days[this.props.url-1].asbl.url} allow='autoplay' width="300" height="350"></iframe>
                             
                             </div>
-                        </div>
-
-                    </div>     
-                    <div className="pageBulleRight">
 
                     </div>
                  {/*   <div className="likesBulle">
