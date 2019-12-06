@@ -29,9 +29,10 @@ class HomePage extends Component {
                             <NavLink  
                                 className="dayCalendarLink" 
                                 activeClassName="active"
+                                
                                 to={  `/Bulle/${index + 1}`}  //lien
                             >
-                                 <p className="homePageP">Day {index+1}</p > <div className="likes"> {day.likes}</div>
+                                 <p onClick={()=> this.props.transIndex(index+1)} className="homePageP">Day {index+1}</p > <div className="likes"><div>{day.likes}</div></div>
                             </NavLink> :
                             null}
                                    

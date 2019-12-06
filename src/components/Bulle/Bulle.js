@@ -11,14 +11,20 @@ class Bulle extends Component {
     constructor(props) {
         super(props);
         console.log("in bulles ?", props.days)
+        this.arrayDay = props.days;
         this.state = {  };
-        this.lastElementofURL = this.findLastElement(this.props.url);
+        console.log(this.props.url, "transindex")
+       // this.lastElementofURL = this.findLastElement(this.props.url);
     }
 
-    findLastElement = (url) => {
-        const splitted = url.split('/');
-        let lastSegment = splitted.pop();
-    return lastSegment
+//     findLastElement = (url) => {
+//         console.log(url, "c'est bulle URLL")
+//         const splitted = url.split('/');
+//         let lastSegment = splitted.pop();
+//     return lastSegment
+// }
+componentDidUpdate() {
+    console.log(this.props.url, "c'est bulle URLL");
 }
     
     render() { 
@@ -36,9 +42,19 @@ class Bulle extends Component {
                     <div className="pageBulleLeft">
                         <div class="embedresize">
                             <div>
-                            <iframe allowfullscreen frameborder="0" src={this.props.days[this.lastElementofURL].customisationPersonnelle} allow='autoplay' width="300" height="350"></iframe>
+                            <iframe allowfullscreen frameborder="0" src={this.props.days[this.props.url-1].customisationPersonnelle} allow='autoplay' width="300" height="350"></iframe>
+                            
                             </div>
                         </div>
+                        <p> Great Day ! They have got 2,40€</p>
+                        <h2>{this.props.days[this.props.url-1].asbl.name}</h2> <p>{this.props.days[this.props.url-1].asbl.description}</p>
+                        <div class="embedresize">
+                            <div>
+                            <iframe allowfullscreen frameborder="0" src={this.props.days[this.props.url-1].asbl.url} allow='autoplay' width="300" height="350"></iframe>
+                            
+                            </div>
+                        </div>
+
                     </div>     
                     <div className="pageBulleRight">
 
